@@ -5394,6 +5394,10 @@ void _UG_PutText(UG_TEXT* txt)
    UG_S16 xe=txt->a.xe;
    UG_S16 ye=txt->a.ye;
    UG_U8  align=txt->align;
+   if(txt->font == NULL)
+   {
+   	return;	
+   }
    UG_S16 char_width=txt->font->char_width;
    UG_S16 char_height=txt->font->char_height;
    UG_S16 char_h_space=txt->h_space;
